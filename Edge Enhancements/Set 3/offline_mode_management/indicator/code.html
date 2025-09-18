@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Offline Access Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-700/50 px-6 sm:px-10 py-4">
+<div class="flex items-center gap-4 text-gray-900 dark:text-white">
+<div class="w-8 h-8 text-primary">
+<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z"></path>
+<path d="M12 15.968L16.247 18.345L15.298 13.57L18.871 10.267L14.038 9.69L12 5.23L9.962 9.69L5.129 10.267L8.702 13.57L7.753 18.345L12 15.968Z" fill="white"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold">MediConnect</h2>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Appointments</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Messages</a>
+<a class="text-sm font-medium hover:text-primary" href="#">Doctors</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="relative rounded-full p-2 hover:bg-gray-200 dark:hover:bg-gray-700/50">
+<span class="material-symbols-outlined">
+                notifications
+            </span>
+</button>
+<div class="w-10 h-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMk4rpzg1RB9dnWsZJTxPrR5FUS5oRyLcLaMnKiJLu-mdUklmTFyw_Ke5V-QWlATQOs0Aupt5BQhd8fcr4_mCkAcudpEybrnqSKnNABuaNdoiW8MCKolOqYtOC-vlCtbHpD3-vQ-BpNELYdUDiD2N-zfkGgJH5kRfKhANjfUoHCGf4htIofyv84mWsFXmsE51J9hPdNaEoPANkaN7epkkpxMqAci9Zx67zAdLtGqRqNQCVZXIxO-jKC2JRnYjgaZj9799i8m_qz4I");'></div>
+</div>
+</header>
+<main class="flex-grow flex justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-2xl space-y-8">
+<div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Offline Access</h1>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+            Access certain information even when you're offline. Please note that some features require an active internet connection.
+          </p>
+</div>
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700/50">
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Cached Content</h2>
+<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            This is the data stored on your device for offline use.
+          </p>
+<ul class="mt-6 space-y-4">
+<li class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 text-primary p-3 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">folder_open</span>
+</div>
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Medical Records</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Last updated: 2 hours ago</p>
+</div>
+</div>
+</li>
+<li class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 text-primary p-3 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Upcoming Appointments</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Last updated: 1 hour ago</p>
+</div>
+</div>
+</li>
+<li class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-primary/10 text-primary p-3 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<div>
+<p class="font-medium text-gray-900 dark:text-white">Recent Messages</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">Last updated: 30 minutes ago</p>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="bg-white dark:bg-background-dark/50 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700/50">
+<h2 class="text-lg font-semibold text-gray-900 dark:text-white">Manage Offline Data</h2>
+<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            Clearing cached data will remove offline access to the selected information until you're back online.
+          </p>
+<div class="mt-6 flex justify-end">
+<button class="bg-primary text-white font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary">
+              Clear Cached Data
+            </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

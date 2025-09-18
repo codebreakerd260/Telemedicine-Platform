@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doctor Dashboard</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen">
+<aside class="w-64 bg-background-light dark:bg-background-dark flex flex-col p-6 border-r border-primary/20 dark:border-primary/30">
+<div class="flex items-center gap-3 mb-10">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAo1uvj5c9lL02iFg-nJexEJo7tStUoj7zH_ikIwUwzgH5yeNTlEXM4T9c5bkfGAKy7mmXUoqM_IL9COugL3fz9aeH3rjpMoOidGPLK53WQn770zXlBUZDRVA6Y8TJrzkcSRurU6azOKnqTVQrciyLuPqzSAe_9dbyIA1AT5nSFN6j4BEdBd1ssWs2Sf6MkGzDmojzFw4fgMzF9eZ-_56_WAmqiHOA4Yh3cz2Mvj8uKES4364HEXkIHqM3mWGx3QeGp8VtGrWeb7rE');"></div>
+<div>
+<h1 class="text-gray-800 dark:text-white font-bold text-lg">Dr. Robert Carter</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm">General Practitioner</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-semibold" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path>
+</svg>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"></path>
+</svg>
+<span>Patients</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"></path>
+</svg>
+<span>Schedule</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z"></path>
+</svg>
+<span>Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary" href="#">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"></path>
+</svg>
+<span>Billing</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<h1 class="text-4xl font-bold text-gray-800 dark:text-white mb-8">Dashboard</h1>
+<div class="bg-background-light dark:bg-background-dark p-6 rounded-xl shadow-md">
+<h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Incoming Requests</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="border-b border-primary/20 dark:border-primary/30">
+<tr>
+<th class="p-4 text-gray-600 dark:text-gray-400 font-semibold">Patient</th>
+<th class="p-4 text-gray-600 dark:text-gray-400 font-semibold">Date</th>
+<th class="p-4 text-gray-600 dark:text-gray-400 font-semibold">Time</th>
+<th class="p-4 text-gray-600 dark:text-gray-400 font-semibold">Reason</th>
+<th class="p-4 text-gray-600 dark:text-gray-400 font-semibold">Status</th>
+<th class="p-4 text-gray-600 dark:text-gray-400 font-semibold">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-primary/10 dark:border-primary/20">
+<td class="p-4 text-gray-800 dark:text-gray-200">Sophia Clark</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">2024-03-15</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">10:00 AM</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">Flu symptoms</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Pending</span></td>
+<td class="p-4"><button class="px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90">View</button></td>
+</tr>
+<tr class="border-b border-primary/10 dark:border-primary/20">
+<td class="p-4 text-gray-800 dark:text-gray-200">Ethan Miller</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">2024-03-15</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">11:30 AM</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">Follow-up appointment</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Pending</span></td>
+<td class="p-4"><button class="px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90">View</button></td>
+</tr>
+<tr class="border-b border-primary/10 dark:border-primary/20">
+<td class="p-4 text-gray-800 dark:text-gray-200">Olivia Davis</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">2024-03-16</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">09:00 AM</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">Skin rash</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Pending</span></td>
+<td class="p-4"><button class="px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90">View</button></td>
+</tr>
+<tr class="border-b border-primary/10 dark:border-primary/20">
+<td class="p-4 text-gray-800 dark:text-gray-200">Noah Wilson</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">2024-03-16</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">02:00 PM</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">Headache</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Pending</span></td>
+<td class="p-4"><button class="px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90">View</button></td>
+</tr>
+<tr>
+<td class="p-4 text-gray-800 dark:text-gray-200">Ava Thompson</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">2024-03-17</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">10:00 AM</td>
+<td class="p-4 text-gray-500 dark:text-gray-400">Annual check-up</td>
+<td class="p-4"><span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">Pending</span></td>
+<td class="p-4"><button class="px-4 py-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90">View</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

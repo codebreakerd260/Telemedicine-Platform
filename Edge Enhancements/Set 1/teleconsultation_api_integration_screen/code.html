@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Telemedicine Admin - API Integration</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="flex h-screen flex-col">
+<header class="flex h-16 shrink-0 items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-8 bg-primary text-white rounded-lg">
+<span class="material-symbols-outlined text-xl">
+                        video_chat
+                    </span>
+</div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">HealthConnect</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Patients</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Providers</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Billing</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Reports</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">
+                        notifications
+                    </span>
+</button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkxg-486r5loEQoZTpgYoy3PaFOeP3jPoPfPuN8Rg_X1WrHCZmJaVPbWSWMDv0OGU0YWDAFChg-GnD_aTdIl3-ugIXpD2XbYB53tOX3OpvbRzttYHbL2z1Gui5CW3ZqiPHrNndshdiK7aC6ZLkqM3QXJn_j5t7VVwUuURMe0RJQOMlFm3eV5ZHOWCxYPnspkO2uxL60SK4nPKKTXPUTvUQ9-m6cpuSxnojdYwh6QvTh6oOVWjynrqlrYYM8U4ldLuoMgjWNzIpQ6w");'></div>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="container mx-auto px-6 py-8">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8">Video Conferencing API Integration</h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">API Key Management</h3>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="api-key">API Key</label>
+<div class="relative">
+<input class="w-full h-10 px-3 pr-10 rounded border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary" id="api-key" type="password" value="********************************"/>
+<button class="absolute inset-y-0 right-0 flex items-center px-3 text-slate-500 dark:text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined text-lg">
+                                                visibility
+                                            </span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 pt-2">
+<button class="px-4 py-2 text-sm font-medium rounded bg-primary text-white hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark">
+                                        Regenerate API Key
+                                    </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Troubleshooting</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-4">If you are experiencing issues with video conferencing, please check the following:</p>
+<div class="space-y-3">
+<label class="flex items-center gap-3">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary/50 bg-slate-100 dark:bg-slate-800" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300">Ensure your API key is valid and has not expired.</span>
+</label>
+<label class="flex items-center gap-3">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary/50 bg-slate-100 dark:bg-slate-800" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300">Verify that your network connection is stable.</span>
+</label>
+<label class="flex items-center gap-3">
+<input class="h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary/50 bg-slate-100 dark:bg-slate-800" type="checkbox"/>
+<span class="text-sm text-slate-700 dark:text-slate-300">Check the API provider's status page for any known issues.</span>
+</label>
+</div>
+<div class="mt-6">
+<button class="px-4 py-2 text-sm font-medium rounded bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 focus:ring-offset-background-light dark:focus:ring-offset-background-dark">
+                                    Contact Support
+                                </button>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="bg-white dark:bg-slate-900 rounded-lg shadow-sm p-6">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Connection Status</h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex size-8 items-center justify-center rounded-full bg-green-100 dark:bg-green-900/50">
+<div class="size-3 rounded-full bg-green-500"></div>
+</div>
+<div>
+<p class="font-medium text-slate-800 dark:text-slate-200">Status</p>
+<p class="text-sm text-green-600 dark:text-green-400">Connected</p>
+</div>
+</div>
+<button class="text-slate-500 dark:text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">
+                                        refresh
+                                    </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

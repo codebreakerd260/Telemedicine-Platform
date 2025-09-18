@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Translation Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-background-light dark:bg-background-dark border-r border-primary/20 dark:border-primary/30 p-6 flex flex-col">
+<h1 class="text-2xl font-bold text-gray-800 dark:text-white mb-8">Acme Telemedicine</h1>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center space-x-3 p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="font-medium">Patients</span>
+</a>
+<a class="flex items-center space-x-3 p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="font-medium">Providers</span>
+</a>
+<a class="flex items-center space-x-3 p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-medium">Billing</span>
+</a>
+<a class="flex items-center space-x-3 p-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-medium">Settings</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 p-8">
+<div class="max-w-4xl mx-auto">
+<header class="mb-12">
+<h1 class="text-4xl font-bold text-gray-800 dark:text-white">Translation Settings</h1>
+<p class="text-gray-500 dark:text-gray-400 mt-2">Manage your translation service configuration and monitor usage.</p>
+</header>
+<section class="mb-12">
+<h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">API Configuration</h2>
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-lg p-6 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="api-key">API Key</label>
+<input class="w-full bg-white dark:bg-gray-800 border border-primary/30 dark:border-primary/40 rounded-lg p-3 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition" id="api-key" type="password" value="••••••••••••••••"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="api-endpoint">API Endpoint</label>
+<input class="w-full bg-white dark:bg-gray-800 border border-primary/30 dark:border-primary/40 rounded-lg p-3 text-gray-800 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition" id="api-endpoint" type="text" value="https://api.acme-translate.com/v1"/>
+</div>
+</div>
+<div class="flex justify-end">
+<button class="bg-primary text-white font-semibold py-2 px-6 rounded-lg hover:bg-primary/90 transition-colors">Save Configuration</button>
+</div>
+</div>
+</section>
+<section class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">Supported Languages</h2>
+<button class="bg-primary/20 dark:bg-primary/30 text-primary font-semibold py-2 px-4 rounded-lg hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors flex items-center space-x-2">
+<span class="material-symbols-outlined">add</span>
+<span>Add Language</span>
+</button>
+</div>
+<div class="overflow-x-auto bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-lg">
+<table class="min-w-full text-sm">
+<thead class="bg-background-light dark:bg-background-dark border-b border-primary/20 dark:border-primary/30">
+<tr>
+<th class="px-6 py-4 text-left font-semibold text-gray-600 dark:text-gray-300" scope="col">Language</th>
+<th class="px-6 py-4 text-left font-semibold text-gray-600 dark:text-gray-300" scope="col">Code</th>
+<th class="px-6 py-4 text-center font-semibold text-gray-600 dark:text-gray-300" scope="col">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/20 dark:divide-primary/30">
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-gray-800 dark:text-white">English</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">en</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Enabled</span>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-gray-800 dark:text-white">Spanish</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">es</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Enabled</span>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-gray-800 dark:text-white">French</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">fr</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">Enabled</span>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-gray-800 dark:text-white">German</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">de</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Disabled</span>
+</td>
+</tr>
+<tr class="hover:bg-primary/5 dark:hover:bg-primary/10">
+<td class="px-6 py-4 whitespace-nowrap text-gray-800 dark:text-white">Chinese</td>
+<td class="px-6 py-4 whitespace-nowrap text-gray-500 dark:text-gray-400">zh</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">Disabled</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Usage Monitoring</h2>
+<div class="bg-background-light dark:bg-background-dark border border-primary/20 dark:border-primary/30 rounded-lg p-6">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-base font-medium text-gray-600 dark:text-gray-400">Translation Requests</p>
+<p class="text-4xl font-bold text-gray-800 dark:text-white mt-1">1,234</p>
+<div class="flex items-center mt-2">
+<p class="text-sm text-gray-500 dark:text-gray-400">Last 30 Days</p>
+<p class="text-sm font-medium text-green-500 ml-2">+15%</p>
+</div>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400">Last updated: July 15, 2024</p>
+</div>
+<div class="mt-8 h-48 flex items-end justify-between space-x-4">
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 30%"></div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Jan</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 70%"></div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Feb</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 10%"></div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Mar</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 80%"></div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Apr</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary rounded-t-lg" style="height: 100%"></div>
+<p class="text-xs font-bold text-primary mt-2">May</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 90%"></div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Jun</p>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 dark:bg-primary/30 rounded-t-lg" style="height: 30%"></div>
+<p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Jul</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+</body></html>

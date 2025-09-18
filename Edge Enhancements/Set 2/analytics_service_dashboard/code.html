@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthConnect Analytics</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "foreground-light": "#0d171b",
+              "foreground-dark": "#f6f7f8",
+              "subtle-light": "#e7eff3",
+              "subtle-dark": "#1a2a33",
+              "border-light": "#cfdfe7",
+              "border-dark": "#2a3f4d",
+              "success-light": "#078836",
+              "success-dark": "#34d399",
+              "danger-light": "#e73508",
+              "danger-dark": "#f87171",
+              "muted-light": "#4c809a",
+              "muted-dark": "#94a3b8",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+<div class="flex h-screen w-full flex-col">
+<header class="flex h-16 shrink-0 items-center justify-between border-b border-border-light dark:border-border-dark px-6 lg:px-10">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4C16.4183 4 20 7.58172 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4Z" fill-rule="evenodd"></path>
+<path d="M13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"></path>
+</svg>
+<h1 class="text-xl font-bold">HealthConnect</h1>
+</div>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium text-muted-light dark:text-muted-dark hover:text-primary transition-colors" href="#">Patients</a>
+<a class="text-sm font-medium text-muted-light dark:text-muted-dark hover:text-primary transition-colors" href="#">Providers</a>
+<a class="text-sm font-medium text-muted-light dark:text-muted-dark hover:text-primary transition-colors" href="#">Billing</a>
+<a class="text-sm font-medium text-muted-light dark:text-muted-dark hover:text-primary transition-colors" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-subtle-light dark:bg-subtle-dark text-muted-light dark:text-muted-dark hover:bg-primary/20 hover:text-primary transition-colors">
+<span class="material-symbols-outlined"> notifications </span>
+</button>
+<img alt="User avatar" class="h-10 w-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3bk_GZGAvuviZUrjaeA2F66AdAHXZ84QuxP8kWl7mk0cjnWUWkkqlFqk8-DKXEJsnAQAYhsRpL-eUyXpjRX2VTtM5HWuOtQLqaSqoahODY168p5cYCxOLKwtRhLG2I7xQmSjOXK3luwfbXsDL-iZdEMjPtIihevIg2VyeOLX7hJObuk_0yp8cHmtKoHATvVqEzUSut0-9W304_lQB0TYq7xsBqobbQ-wqcEQkI4rcqU46U4lehY7ktWgCZPVSB5fM2rjUdRSD3i4"/>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto">
+<div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight">Analytics Dashboard</h2>
+<p class="text-muted-light dark:text-muted-dark">Overview of key performance indicators and trends</p>
+</div>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="rounded-lg bg-subtle-light dark:bg-subtle-dark p-6">
+<p class="text-sm font-medium text-muted-light dark:text-muted-dark">Total Consultations</p>
+<p class="mt-1 text-3xl font-bold">1,250</p>
+<p class="mt-2 text-sm font-medium text-success-light dark:text-success-dark">+15%</p>
+</div>
+<div class="rounded-lg bg-subtle-light dark:bg-subtle-dark p-6">
+<p class="text-sm font-medium text-muted-light dark:text-muted-dark">Active Users</p>
+<p class="mt-1 text-3xl font-bold">875</p>
+<p class="mt-2 text-sm font-medium text-success-light dark:text-success-dark">+10%</p>
+</div>
+<div class="rounded-lg bg-subtle-light dark:bg-subtle-dark p-6">
+<p class="text-sm font-medium text-muted-light dark:text-muted-dark">Avg. Consultation Time</p>
+<p class="mt-1 text-3xl font-bold">25 mins</p>
+<p class="mt-2 text-sm font-medium text-danger-light dark:text-danger-dark">-5%</p>
+</div>
+</div>
+<div class="mt-10">
+<h3 class="text-2xl font-bold">Consultation Trends</h3>
+<div class="mt-4 grid grid-cols-1 gap-6">
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-base font-medium">Consultations Over Time</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Last 30 Days</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold">1,250</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+15%</p>
+</div>
+</div>
+<div class="mt-6 h-64">
+<svg fill="none" height="100%" preserveAspectRatio="none" viewBox="0 0 475 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109 C 18.1538 109 18.1538 21 36.3077 21 C 54.4615 21 54.4615 41 72.6154 41 C 90.7692 41 90.7692 93 108.923 93 C 127.077 93 127.077 33 145.231 33 C 163.385 33 163.385 101 181.538 101 C 199.692 101 199.692 61 217.846 61 C 236 61 236 45 254.154 45 C 272.308 45 272.308 121 290.462 121 C 308.615 121 308.615 149 326.769 149 C 344.923 149 344.923 1 363.077 1 C 381.231 1 381.231 81 399.385 81 C 417.538 81 417.538 129 435.692 129 C 453.846 129 453.846 25 472 25" stroke="#1193d4" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0 109 C 18.1538 109 18.1538 21 36.3077 21 C 54.4615 21 54.4615 41 72.6154 41 C 90.7692 41 90.7692 93 108.923 93 C 127.077 93 127.077 33 145.231 33 C 163.385 33 163.385 101 181.538 101 C 199.692 101 199.692 61 217.846 61 C 236 61 236 45 254.154 45 C 272.308 45 272.308 121 290.462 121 C 308.615 121 308.615 149 326.769 149 C 344.923 149 344.923 1 363.077 1 C 381.231 1 381.231 81 399.385 81 C 417.538 81 417.538 129 435.692 129 C 453.846 129 453.846 25 472 25 V 150 H 0 Z" fill="url(#gradient-chart)"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="gradient-chart" x1="0" x2="0" y1="0" y2="150">
+<stop stop-color="#1193d4" stop-opacity="0.2"></stop>
+<stop offset="1" stop-color="#1193d4" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="mt-4 flex justify-around text-sm font-medium text-muted-light dark:text-muted-dark">
+<p>Week 1</p>
+<p>Week 2</p>
+<p>Week 3</p>
+<p>Week 4</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<h3 class="text-2xl font-bold">User Engagement</h3>
+<div class="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2">
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-base font-medium">User Activity</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Last 30 Days</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold">875</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+10%</p>
+</div>
+</div>
+<div class="mt-6 grid h-48 grid-cols-2 items-end gap-6 px-3">
+<div class="flex flex-col items-center gap-2">
+<div class="h-full w-full rounded bg-primary/20" style="height: 80%"></div>
+<p class="text-sm font-medium text-muted-light dark:text-muted-dark">Patients</p>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="h-full w-full rounded bg-primary/40" style="height: 65%"></div>
+<p class="text-sm font-medium text-muted-light dark:text-muted-dark">Providers</p>
+</div>
+</div>
+</div>
+<div class="rounded-lg border border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-6">
+<div class="flex items-start justify-between">
+<div>
+<p class="text-base font-medium">Patient Satisfaction</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Last 30 Days</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold">4.8/5</p>
+<p class="text-sm font-medium text-success-light dark:text-success-dark">+0.1</p>
+</div>
+</div>
+<div class="mt-6 space-y-4 pt-2">
+<div class="flex items-center gap-4">
+<span class="w-12 text-sm text-muted-light dark:text-muted-dark">5 Stars</span>
+<div class="h-2 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"><div class="h-full rounded-full bg-primary" style="width: 70%"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 text-sm text-muted-light dark:text-muted-dark">4 Stars</span>
+<div class="h-2 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"><div class="h-full rounded-full bg-primary" style="width: 15%"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 text-sm text-muted-light dark:text-muted-dark">3 Stars</span>
+<div class="h-2 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"><div class="h-full rounded-full bg-primary" style="width: 8%"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 text-sm text-muted-light dark:text-muted-dark">2 Stars</span>
+<div class="h-2 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"><div class="h-full rounded-full bg-primary" style="width: 4%"></div></div>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 text-sm text-muted-light dark:text-muted-dark">1 Star</span>
+<div class="h-2 flex-1 rounded-full bg-subtle-light dark:bg-subtle-dark"><div class="h-full rounded-full bg-primary" style="width: 3%"></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

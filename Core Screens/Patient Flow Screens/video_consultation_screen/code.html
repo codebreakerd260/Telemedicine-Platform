@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HealthConnect - Video Call</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1193d4",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex flex-col h-screen">
+<header class="flex items-center justify-between px-6 py-3 border-b border-slate-200 dark:border-slate-800 shrink-0">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-white">HealthConnect</h1>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden md:flex items-center gap-4">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium text-primary dark:text-primary font-bold" href="#">Appointments</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary" href="#">Messages</a>
+</nav>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="w-10 h-10 bg-center bg-no-repeat bg-cover rounded-full" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA13na7TaaQVy9lLdX3a_IYE9kNGO4ybZgUVJSI0rquWf84g0jTHgVdr4Srs89Om9rLCscP4hLZkGHa3nCzLKGjVLPWXnUtTMUyjbOwQIav1en7ou2kUyHWoczS--OYKJYVFYO2k4Mv-mUXCZozzrrxi6fd8037JaK0X13XWG3P5kC8lwBagVVXp0Ua0wOv8O15c4I81tMXeyeB4OMVD3fJj5S0QNS0VVluqOGhZP79ANo_nlfJ_Xk-TQbDzYHyDpEI1T3wIG1iK78');"></div>
+</div>
+</header>
+<main class="flex-1 flex overflow-hidden">
+<div class="flex-1 flex flex-col p-4 md:p-6 gap-6">
+<div class="relative flex-1 bg-slate-900 rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDi50MflDV05VtFIeseS6ElWChV21kg1YIWVxJYoNuXGMka__dtQdCeuLVVqVDZ0uZ1aE1NxEDH6xIbIgRpFLUfSDJwX-VpfABOh0BwB9btCy_LIOHTTVyLjvpKKgjYCZc27CeFDYd73UBY8crymK9k8uUbyn8UfGghua6lhVtSTKAwyKitipSalDITqHb47-DeSX3I-YTRzCdCXu0kQzY_N2EoHXamr_IqLQsHIMcSC793POaba2lHug824n2Ukv4rA36sLR4DW1Y');"></div>
+<div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="p-4 rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 transition-colors">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-center gap-4">
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">mic_off</span>
+<span>Mute</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-3 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700 transition-colors">
+<span class="material-symbols-outlined">call_end</span>
+<span>End Call</span>
+</button>
+</div>
+</div>
+<aside class="w-[360px] border-l border-slate-200 dark:border-slate-800 flex flex-col">
+<div class="p-4 border-b border-slate-200 dark:border-slate-800">
+<h2 class="text-lg font-bold text-slate-900 dark:text-white">Chat</h2>
+</div>
+<div class="flex-1 p-4 space-y-6 overflow-y-auto">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqREpj0cHxuzbiqKtzeQS9RY0S0w6Y3W2ZRWjJjar4tY4158yngDvf0C1LH0of5HQ-ls2rn3Yu_V1RI7wYhhW-F0a1w-c0ZRARDqpdfFILN2J1G22FTZYwkXqQWlP9YdSFsNxLCThv7GPubi1K9NbFeefO2xtmZQgcYvQ7mAPELVdyYwY1vmSy3c6-T9rrn4b2RS6DFv8pExGztvVGd1TsIAgiamv78iE4u5z8_fVngwwni5DSJLJqrShGxq11PBzZr1XMBVlaoOE');"></div>
+<div class="flex flex-col items-start">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Dr. Emily Carter</span>
+<div class="mt-1 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200">
+<p>Hi Sarah, how are you feeling today?</p>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 justify-end">
+<div class="flex flex-col items-end">
+<span class="text-sm font-semibold text-slate-500 dark:text-slate-400">Sarah Miller</span>
+<div class="mt-1 p-3 rounded-lg bg-primary text-white">
+<p>Hi Dr. Carter, I'm feeling a bit better, thank you. My symptoms have improved since yesterday.</p>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-cover bg-center shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVEmA4NOqeXjhC53j2b__KI61Wdp6PqQhNhMTmY86qCBYjuXpNCuDQB66Xxa44qOLWk2IdwXMApso2lkjMw_rm4FXR2SUWlY5HELsVacjLrfgpwX60Fg1Is5JlMXzxPEngVFnh47-FOfBNqNMxxvKqhFngSkFemWRpY8XZlflduo2LpoURyZcy7fE8Iu4-mT-Off7FDglS3RxuXxEkiVdZDVvLlCcwpIcIR4m-DrPw0ZI6g7tfGFBEwOIvqUCkbvm1bIuo_q-0z38');"></div>
+</div>
+</div>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="relative">
+<input class="w-full pl-4 pr-24 py-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-transparent focus:ring-2 focus:ring-primary focus:border-primary transition-all text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500" placeholder="Type a message..." type="text"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-2">
+<button class="p-2 rounded-full text-slate-500 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<button class="px-4 py-2 ml-2 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors">
+                                Send
+                            </button>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+
+</body></html>
